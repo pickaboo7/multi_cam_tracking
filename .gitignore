@@ -1,4 +1,19 @@
-footage/cam_1.mp4
-footage/cam_2.mp4
-footage/cam_1.mp4
-footage/cam_2.mp4
+# Large video files
+footage/*.mp4
+*.mp4
+
+# Large model files
+*.engine
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
