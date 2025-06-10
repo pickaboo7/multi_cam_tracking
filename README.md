@@ -183,6 +183,6 @@ If you use this work in your research, please cite:
 
 ## Contact
 
-- **Author**: Your Name
-- **Email**: your.email@example.com
+- **Author**: Piyaansh Thukral 
+- **Email**: piyansh2001@gmail.com
 - **Project Link**: https://github.com/pickaboo7/multi_cam_tracking
