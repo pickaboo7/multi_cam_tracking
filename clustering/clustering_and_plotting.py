@@ -102,11 +102,11 @@ class MultivisionTracker:
                         centroids_list[frame] = merged_points
  
                     csv_centroids[view_id] = centroids_list
-                    print(f"    ✅ Loaded primary CSV with {len(df)} entries across {len(frames_grouped)} frames")
+                    print(f"    Loaded primary CSV with {len(df)} entries across {len(frames_grouped)} frames")
                 except Exception as e:
-                    print(f"    ❌ Error loading CSV: {e}")
+                    print(f"     Error loading CSV: {e}")
             else:
-                print(f"    ❌ CSV file missing!")
+                print(f"     CSV file missing!")
  
             if os.path.exists(alt_csv_file):
                 try:
@@ -133,11 +133,11 @@ class MultivisionTracker:
                         centroids_list[frame] = merged_points
  
                     alt_csv_centroids[view_id] = centroids_list
-                    print(f"    ✅ Loaded alternative CSV with {len(df)} entries across {len(frames_grouped)} frames")
+                    print(f"    Loaded alternative CSV with {len(df)} entries across {len(frames_grouped)} frames")
                 except Exception as e:
-                    print(f"    ❌ Error loading alternative CSV: {e}")
+                    print(f"    Error loading alternative CSV: {e}")
             else:
-                print(f"    ❌ Alternative CSV file missing!")
+                print(f"     Alternative CSV file missing!")
  
         for view_id in range(1, self.num_views + 1):
             corners_file = f'{self.base_path}/points_cam_{view_id}.npy'
@@ -148,15 +148,15 @@ class MultivisionTracker:
             print(f"  Image: {image_file}")
  
             if not os.path.exists(corners_file):
-                print(f"  ❌ Corners file missing!")
+                print(f"   Corners file missing!")
                 continue
  
             if view_id-1 not in csv_centroids and view_id-1 not in alt_csv_centroids:
-                print(f"  ❌ No centroids data available!")
+                print(f"  No centroids data available!")
                 continue
  
             if not os.path.exists(image_file):
-                print(f"  ⚠️  Image file missing (optional)")
+                print(f"   Image file missing (optional)")
                 image_file = None
  
             try:
@@ -223,11 +223,11 @@ class MultivisionTracker:
                 non_empty_frames = sum(1 for f in combined_centroids if f is not None and len(f) > 0)
                 total_points = sum(len(f) for f in combined_centroids if f is not None)
  
-                print(f"  ✅ View {view_id}: {len(combined_centroids)} total frames, {non_empty_frames} non-empty frames")
+                print(f"  View {view_id}: {len(combined_centroids)} total frames, {non_empty_frames} non-empty frames")
                 print(f"     Combined {total_points} total points")
                 print(f"     Corners shape: {corners.shape}")
             except Exception as e:
-                print(f"  ❌ Error loading view {view_id}: {e}")
+                print(f"  Error loading view {view_id}: {e}")
  
         print(f"\nSuccessfully loaded {len(self.view_data)} views")
  
