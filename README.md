@@ -148,38 +148,12 @@ tracker.cluster_and_visualize()
 - Lower input resolution
 - Use FP16 precision
 
-## Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - NVIDIA DeepStream SDK
 - Ultralytics YOLOv5/YOLOv8
 - OpenCV community
 - scikit-learn DBSCAN implementation
-
-## Citation
-
-If you use this work in your research, please cite:
-
-```bibtex
-@misc{multicam_tracking_2024,
-  title={Multi-Camera Human Tracking System},
-  author={Your Name},
-  year={2024},
-  publisher={GitHub},
-  howpublished={\url{https://github.com/pickaboo7/multi_cam_tracking}}
-}
-```
 
 ## Contact
 
