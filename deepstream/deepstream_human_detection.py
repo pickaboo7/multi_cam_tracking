@@ -19,7 +19,8 @@ VIDEO_FILES = [
    "/home/piyansh/multi_cam_ds/calibration/footage/cam_3.mp4",
    "/home/piyansh/multi_cam_ds/calibration/footage/cam_4.mp4"
 ]
-TRACKER_CONFIG = "/opt/nvidia/deepstream/deepstream-7.1/samples/configs/deepstream-app/config_tracker_NvDCF_accuracy.yml"
+
+TRACKER_CONFIG = "/opt/nvidia/deepstream/deepstream/samples/configs/deepstream-app/config_tracker_NvDeepSORT.yml"
 
 # Settings
 USE_ALTERNATIVE_SETTINGS = False   # Use alternative settings for contrast and threshold
